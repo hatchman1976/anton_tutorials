@@ -4,5 +4,5 @@ locals {
     zone1       = "us-west-2a"
     zone2       = "us-west-2b"
     eks_name    = "demo"
-    eks_version = "1.31.2"
+    eks_version = "1.31"
 }
