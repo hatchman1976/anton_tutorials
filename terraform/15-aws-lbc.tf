@@ -42,6 +42,7 @@ resource "helm_release" "aws_lbc" {
   repository = "https://aws.github.io/eks-charts"
   chart      = "aws-load-balancer-controller"
   namespace  = "kube-system"
+  # Updated from the original as it was crashing
   version    = "1.8.1"
 
   set {
@@ -54,6 +55,7 @@ resource "helm_release" "aws_lbc" {
     value = "aws-load-balancer-controller"
   }
 
+# This was included too, the original did not have it 
   set {
     name  = "vpcId"
     value = aws_vpc.main.id
